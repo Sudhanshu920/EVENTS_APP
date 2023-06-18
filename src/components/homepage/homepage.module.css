@@ -1,0 +1,26 @@
+.content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6rem;
+}
+
+.events{
+    text-align: center;
+    width: 300px;
+    color: #4F4557;
+    text-decoration: none;
+}
+
+.img{
+    margin-bottom: 0.5rem;
+}
+
+.eventName{
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.eventDesc{
+    font-size: 1rem;
+    text-align: left;
+}

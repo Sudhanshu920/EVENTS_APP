@@ -1,0 +1,17 @@
+.navbar{
+    background-color: #4F4557;
+    height: 4rem;
+}
+.links{
+    display: flex;
+    gap: 3rem;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.link{
+    color: #F4EEE0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

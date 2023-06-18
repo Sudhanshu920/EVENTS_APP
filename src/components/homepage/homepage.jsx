@@ -1,15 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import sytles from './homepage.module.css'
 
 const Homepage = ({data}) => {
   return (
-    <main>
+    <main className={sytles.content}>
         {data.map((ev) => (
-          <Link key={ev.id} href={`events/${ev.id}`}>
-            <Image alt={ev.title} src={ev.image} width={200} height={200} />
-            <h2>{ev.title}</h2>
-            <p>{ev.description}</p>
+          <Link className={sytles.events} key={ev.id} href={`events/${ev.id}`}>
+            <Image className={sytles.img} alt={ev.title} src={ev.image} width={300} height={300} />
+            <h2 className={sytles.eventName}>{ev.title}</h2>
+            <p className={sytles.eventDesc}>{ev.description}</p>
           </Link>
         ))}
       </main>
