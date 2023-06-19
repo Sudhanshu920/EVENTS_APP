@@ -1,6 +1,10 @@
 .navbar{
     background-color: #4F4557;
     height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .links{
     display: flex;

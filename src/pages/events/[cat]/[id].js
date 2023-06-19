@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
+import styles from './index2.module.css'
 
 const SingleEvent = ({ data }) => {
   const inputEmail = useRef();
@@ -37,20 +38,25 @@ const SingleEvent = ({ data }) => {
     }
   };
   return (
+    <div className={styles.container}>
     <div>
-      <h2>{data.title}</h2>
-      <Image src={data.image} alt={data.title} width={200} height={200} />
-      <p>{data.description}</p>
-      <form onSubmit={onSubmit}>
+      <h2 className={styles.title}>{data.title}</h2>
+      <Image src={data.image} alt={data.title} width={400} height={400} />
+    </div>
+      <div>
+      <p className={styles.desc}>{data.description}</p>
+      <form className={styles.form} onSubmit={onSubmit}>
         <label>get registered for this event!</label>
         <input
           ref={inputEmail}
           id="email"
           placeholder="please insert your email here"
+          className={styles.input}
         />
-        <button type="submit">Submit</button>
+        <button className={styles.button} type="submit">Submit</button>
       </form>
       <p>{message}</p>
+      </div>
     </div>
   );
 };

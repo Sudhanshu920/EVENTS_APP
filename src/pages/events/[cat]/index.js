@@ -1,17 +1,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import styles from './index.module.css'
 
 const index = ({ data, pageName }) => {
   return (
-    <div>
-      <h1>Events in {pageName}</h1>
-      <div>
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Events in {pageName}</h1>
+      <div className={styles.content}>
         {data.map((ev) => (
-          <Link key={ev.id} href={`/events/${pageName}/${ev.id}`}>
-            <Image src={ev.image} width={200} height={200} alt={ev.title} />
-            <h2>{ev.title}</h2>
+          <Link className={styles.item} key={ev.id} href={`/events/${pageName}/${ev.id}`}>
+            <Image className={styles.image} src={ev.image} width={200} height={200} alt={ev.title} />
+            <div>
+            <h2 className={styles.eventName}>{ev.title}</h2>
             <p>{ev.description}</p>
+            </div>
           </Link>
         ))}
       </div>

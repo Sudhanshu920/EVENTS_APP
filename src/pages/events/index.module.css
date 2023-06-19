@@ -1,0 +1,28 @@
+.container{
+    height: 84vh;
+    margin-top: 4rem;
+    overflow: auto;
+}
+
+.heading{
+    margin-left: 45%;
+    font-size: 6rem;
+    font-weight: 900;
+    color: #393646;
+}
+
+.content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.item{
+    text-decoration: none;
+}
+
+.title{
+    font-size: 1.8rem;
+    color: #4F4557;
+}
